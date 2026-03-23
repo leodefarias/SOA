@@ -92,11 +92,10 @@ mvn exec:java -Dexec.mainClass="br.com.fiap.soap.client.PedidoClient"
 
 O cliente demonstra todas as operações: criação de pedidos, listagem, busca, atualização de status (incluindo cenários de erro), e cancelamento.
 
-## Próximas Features
+## Integrantes
 
-- **Persistência em banco de dados:** Substituir armazenamento in-memory por JPA/Hibernate
-- **Autenticação WS-Security:** Adicionar autenticação e autorização nas operações SOAP
-- **Notificações:** Webhook/callback quando o status de um pedido muda
-- **Dashboard de métricas:** Relatórios de pedidos por período, faturamento, tempo médio de preparo
-- **Multi-tenant:** Suporte a múltiplos restaurantes no mesmo serviço
-- **Histórico de status:** Registrar data/hora de cada transição de status
+| Nome | RM |
+|------|-----|
+| Leonardo de Farias | 555211 |
+| Giancarlo Cestarolli | 555248 |
+| Gustavo Laur | 556603 |
