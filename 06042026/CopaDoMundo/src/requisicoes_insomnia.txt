@@ -1,0 +1,69 @@
+CopaDoMundoAPI - Requisições para Insomnia
+
+BASE URL:
+http://localhost:8080
+
+========================================
+1. CRIAR TIME
+========================================
+POST /api/times
+
+Body (JSON):
+{
+  "nome": "Brasil",
+  "pais": "Brasil"
+}
+
+========================================
+2. LISTAR TIMES
+========================================
+GET /api/times
+
+========================================
+3. CRIAR JOGADOR VINCULADO A UM TIME
+========================================
+IMPORTANTE:
+O vínculo do jogador com o time é feito pelo ID do time na URL.
+
+Exemplo: /api/jogadores/1 → jogador será vinculado ao time de ID = 1
+
+POST /api/jogadores/{timeId}
+
+Exemplo:
+POST /api/jogadores/1
+
+Body (JSON):
+{
+  "nome": "Joao",
+  "posicao": "Atacante"
+}
+
+========================================
+4. LISTAR JOGADORES (COM TIME VINCULADO)
+========================================
+GET /api/jogadores
+
+Resposta esperada:
+[
+  {
+    "id": 1,
+    "nome": "Joao",
+    "posicao": "Atacante",
+    "time": {
+      "id": 1,
+      "nome": "Brasil",
+      "pais": "Brasil"
+    }
+  }
+]
+
+========================================
+5. TESTE DE ERRO (TIME NÃO ENCONTRADO)
+========================================
+POST /api/jogadores/99
+
+Body (JSON):
+{
+  "nome": "Jogador Teste",
+  "posicao": "Meio-campo"
+}
